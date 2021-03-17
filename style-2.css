@@ -19,3 +19,17 @@ table {
     background-color: black;
     color: white;
   }
+
+.otazka {
+    color: rgb(37, 6, 95);
+    font-size: 150%;
+    background-color: gainsboro;
+    padding: 1%;
+}
+
+.odpoved {
+    border-left: 10px solid gainsboro;
+    padding-left: 20px;
+
+
+}
