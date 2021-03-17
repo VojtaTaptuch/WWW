@@ -121,10 +121,98 @@
             </td>
           </tr>
         </table>
+        <p></p>
+     </div>
 
+    <div class="otazka">6. Proč se stále častěji využívá protokol HTTPS?</div>
+    <div class="odpoved">
+      <p>HTTPS (Hypertext Transfer Protocol Secure = HTTP se zabezpečením)
+         je nadstavba protokolu HTTP, která poskytuje zvýšenou bezpečnost před odposloucháváním či podvržením dat. Standardní port na straně serveru je 443 TCP.</p>
+          <h3>K výhodám HTTPS patří:</h3>
+         <ul>
+        <li>možnost ověření identity</li>
+        <li>důvěrnost přenášených dat</li>
+        <li>integrita obsahu</li>
+      </ul>
+    </div>
 
+    <div class="otazka">7. Vysvětlete zkratku URL a připojte pět různých příkladů
+      URL odkazů.</div>
+    <div class="odpoved">
+      <p>URL (Uniform Resource Locator) je řetězec znaků s definovanou strukturou, který slouží k přesné specifikaci umístění zdrojů informací (ve smyslu dokument nebo služba) na Internetu. 
+      URL definuje doménovou adresu serveru, umístění zdroje na serveru a protokol, kterým je možné zdroj zpřístupnit.</p>
+
+        <h3>Příklady:</h3>
+        <ul>
+          <li>https://www.youtube.com</li>
+          <li>https://cs.wikipedia.org/wiki/Hlavní_strana</li>
+          <li>https://www.w3schools.com</li>
+          <li>https://twitter.com/home</li>
+          <li>https://www.zive.cz</li>
+        </ul>
       </div>
-      
+
+      <div class="otazka">8. Co jsou a k čemu slouží tzv. cookies? Připojte obrázek
+        ukazující uložená cookies k některé internetové
+        stránce.</div>
+      <div class="odpoved">
+        <p>Jako cookie (anglicky koláček, oplatka, sušenka) se v protokolu HTTP označuje malé množství dat, která WWW server pošle prohlížeči a ten je uloží na počítači uživatele. Při každé další návštěvě téhož serveru pak prohlížeč tato data posílá zpět serveru. 
+          Cookies běžně slouží k rozlišování jednotlivých uživatelů, ukládá se do nich obsah „nákupního košíku“ v elektronických obchodech, uživatelské předvolby apod.
+          Funkce cookies je definována pomocí HTTP hlavičky Set-Cookie, která bývá posílána v odpovědi serveru a obsahuje jednak data cookie (omezená prohlížečem, vyžadována je podpora alespoň pro 4096 byte), jednak informace o době platnosti, adresář na serveru, pro který cookie platí apod. 
+          Pokud má prohlížeč alespoň jednu cookie pro daný server (a daný adresář na něm), posílá s každým dotazem danému serveru i hlavičku cookie, která obsahuje stejná data, která server původně poslal.
+          Přestože většina prohlížečů cookies podporuje, jiné jednodušší prohlížeče (např. na mobilních zařízeních) je podporovat nemusejí; navíc cookies lze ve většině prohlížečů zakázat. 
+          </p>
+        <figure>
+          <img src="/cookies.png" alt="Cookies">
+        </figure>
+        </div>
+
+        <div class="otazka">9. Vypište přehledně jednotlivé fáze fungování
+          internetových vyhledávačů.</div>
+        <div class="odpoved">
+        <p>Internetový vyhledávač na základě své databáze vypisuje seznam odkazů na stránky, které obsahují informace, jež zadal uživatel do formuláře.
+           Databáze je udržována převážně automaticky na rozdíl od internetových katalogů, které jsou udržovány převážně ručně.
+            Cílem vyhledávačů je poskytnout uživateli při odpovědi na dotaz co nejrelevantnější informace, a proto různými způsoby hodnotí důležitost webových stránek,
+             které mají ve své databázi.
+        </p>
+        <h3>Většina internetových vyhledávačů pracuje ve třech krocích:</h3>
+        <ol>
+          <li>Prohledání webových stránek. Pro prohledání webových stránek má internetový vyhledávač automatický program, tzv. vyhledávací robot (crawler, bot, nebo též spider – „pavouk“), který prochází celý webový prostor. Robot dostane na začátku seznam atraktivních vstupních míst (odkazů), jejichž obsah si přečte, uloží do databáze a zapamatuje si navštívenou adresu odkazu, aby se na ni již podruhé nevracel. Z obsahu stažené stránky vybere seznam všech obsažených odkazů a opět všechny odkazy navštíví. Cyklus návštěvy, sesbírání odkazů a dalších návštěv se stále opakuje. Robot se na navštívené stránky vrací v pravidelných intervalech, aby zjistil, zda se na stránce neobjevily nějaké nové informace. Z principu práce vyhledávače vyplývá, že nikdy nemá úplně aktuální informace, ale prezentuje je se zpožděním. <p></p>
+          </li>
+          <li>
+            Indexování. Databázi obsahující uložené obsahy navštívených stránek je potřeba indexovat, aby bylo možné podle zadaných slov co nejrychleji najít adresy stránek,
+             které je obsahují. Zároveň je nutné vystavět index tak, aby poskytoval na prvních místech stránky s nejvyšší užitnou hodnotou
+              (relevancí, mající nejvyšší hodnocení kvality, nejvyšší váhu). Pro výpočet relevance se používají nejrůznější algoritmy, které jsou založeny na nejrůznějších znacích
+               stránek a různých úhlech analýzy jejich obsahu: <p></p>
+               <ul>
+                <li>Váha slov. Stránka má vyšší hodnocení, když má hledané slovo na stránce vyšší váhu. Váha slov se zvyšuje, je-li slovo v titulku stránky, nadpisu nebo blíže k začátku stránky, případně se na stránce opakuje. Váhu slov lze zneužít vkládáním atraktivních slov do obsahu stránky bez ohledu na její skutečný obsah nebo prostým opakováním slov. Vyhledávač se brání penalizací (snížením kvality) podezřelých stránek. <p></p>
+                </li>
+                <li>Atraktivita stránky. Stránka má vyšší hodnocení, když na ni odkazuje více jiných stránek, protože zřejmě obsahuje zajímavé informace. Atraktivitu lze zneužít vytvářením falešných stránek, které odkazují na stránku, která má získat vyšší hodnocení. Vyhledávač se brání sledováním podezřelého náhlého hromadění odkazů. <p>
+                  
+                </p>
+                </li>
+                <li>Serióznost webu. Webové servery, které obsahují velké množství kvalitních stránek, jsou při výpočtu váhy zvýhodněny. Seznam se může udržovat i ručními zásahy. <p></p>
+                </li>
+                <li>Serióznost webu. Webové servery, které obsahují velké množství kvalitních stránek, jsou při výpočtu váhy zvýhodněny. Seznam se může udržovat i ručními zásahy. <p></p>
+                </li>
+                <li>Technická kvalita. Váha odkazu se zvyšuje, pokud jsou stránky správně sestaveny a vyhovují webovým standardům.
+                  Někdy je nežádoucí, aby robot indexoval některé stránky. Proto existuje možnost, jak roboty omezit pomocí souboru robots.txt, který se umisťuje do kořene webového serveru. <p></p>
+                  </li>
+                </ul>
+
+          </li>
+          <li>Vyhledávání. Databáze a její index se zpřístupní na vstupní stránce vyhledávače. Uživatel získá po zadání hledaných slov seznam adres, na kterých robot hledaná slova našel. Pro vyšší přehlednost se zobrazuje kromě odkazu ještě titulek stránky, a okolí nalezených slov.
+          </li>
+
+
+        </ol>
+
+        </div>
+
+        <div class="otazka">10. Vysvětlete zkratku HTML a pojem hypertext.</div>
+        <div class="odpoved">Hypertext Markup Language (zkratka HTML) je v informatice název značkovacího jazyka používaného pro tvorbu webových stránek, které jsou propojeny hypertextovými odkazy. HTML je hlavním z jazyků pro vytváření stránek v systému World Wide Web, který umožňuje publikaci dokumentů na Internetu.
+
+          Jazyk je aplikací dříve vyvinutého rozsáhlého univerzálního značkovacího jazyka SGML (Standard Generalized Markup Language). Vývoj HTML byl ovlivněn vývojem webových prohlížečů, které zpětně ovlivňovaly definici jazyka.</div>
            
     </main>
     <footer>
